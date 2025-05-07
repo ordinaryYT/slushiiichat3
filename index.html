@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SlushiiiSZN Chat Viewer</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #ff0000;
+    }
+
+    .chat-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>SlushiiiSZN chat</h1>
+
+  <div class="chat-wrapper">
+    <!-- Twitch Chat Embed -->
+    <iframe
+      src="https://www.twitch.tv/embed/SlushiiiSZN/chat?parent=yourdomain.com"
+      width="350"
+      height="500"
+      allowfullscreen>
+    </iframe>
+
+    <!-- DuckDuckGo Embed for YouTube Channel Search -->
+    <iframe
+      src="https://duckduckgo.com/?q=SlushiiiSZN+YouTube+channel"
+      width="600"
+      height="500">
+    </iframe>
+  </div>
+
+  <script>
+    const domain = window.location.hostname;
+    const twitchFrame = document.querySelector("iframe[src*='twitch.tv']");
+    twitchFrame.src = `https://www.twitch.tv/embed/SlushiiiSZN/chat?parent=${domain}`;
+  </script>
+</body>
+</html>
